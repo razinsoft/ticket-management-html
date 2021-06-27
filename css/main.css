@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+	background-color: rgb(228,232,231);
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin: 0;
+}
+.hide{
+	display: none;
+}
+
+.toggler{
+	margin-right: 10px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.sidebar{
+	position: fixed;
+	width: 20%;
+	height: 100%;
+	background: rgb(94,94,94);
+	color: rgb(220, 220, 220);
+}
+.body-content{
+	width: 80%;
+	margin-left: 20%;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.body-content.full-width{
+	width: 100%;
+	margin-left: 0;
+}
+.navbar-light .navbar-brand {
+	color: #fff;
+}
+.navbar-light .navbar-brand:hover {
+	color: lightgrey;
+}
+.bg-dark {
+	background-color: rgb(67, 67, 67) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+.sidebar .list-title{
+	margin-bottom: 20px;
+}
+.sidebar ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.sidebar ul li{
+	padding: 5px 0px;
+	margin-left: -10px;
+	border-radius: 5px;
+}
+.sidebar ul li.active{
+	background: rgb(84,160,203);
+
+}
+.sidebar ul li a{
+	text-decoration: none;
+	color: rgb(220, 220, 220);
+}
+nav .input-group{
+	background-color: rgb(94, 94, 94);
+}
+nav .input-group-text{
+	border: none;
+	background-color: rgb(94, 94, 94);
+	color: lightgrey;
+}
+nav .form-control{
+	background-color: rgb(94, 94, 94);
+	border: none;
+}
+nav .form-control:focus {
+    color: white;
+    background-color: inherit;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+.navbar-nav.ml-auto{
+	margin-top: -15px;
+	margin-bottom: -10px;
+}
+nav .dropdown button{
+	background: rgb(55,110,42);
+}
+nav .dropdown button img{
+	height: 40px;
+}
+nav .navbar-avatar img{
+	height: 100%;
+}
+.fa-file-alt{
+	font-size: 35px;
+	color: grey;
+}
+.card i{
+	font-size: 14px;
+	text-align: center;
+}
+.badge{
+	    vertical-align: 20px;
+    margin-left: -8px;
+}
+.br-1{
+	border-right: 1px solid lightgrey;
+	text-align: center;
+}
+.card hr{
+	margin-bottom: 0;
+}
+.card h5, p{
+	margin: 0;
+	padding: 0;
+}
+.card p{
+	color: grey;
+}
+.card .card-bottom-items{
+	display: flex;
+	flex-direction: row;
+	margin-left: -25px;
+}
+.card .icons{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+.card .icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33.33%;
+	height: 100%;
+	text-align: center;
+	border-right: 1px solid lightgrey;
+}
+.card-bottom-items .item{
+	display: flex;
+	border-right: 1px solid lightgrey;
+	width: 20%;
+	padding: 4px 5px;
+}
+.card-bottom-items .item.last{
+	width: 35%;
+}
+.card-bottom-items .status{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 5%;
+}
+.card-bottom-items .status span.ok{
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	background-color: green;
+}
+.card-bottom-items img{
+	height: 30px;
+}
+.card-bottom-items .text{
+	margin-left: 5px;
+}
+.card-bottom-items .item p{
+	font-size: 12px;
+}
+
+button.blue{
+	border: none;
+	background: blue;
+	padding: 2px 30%;
+	color: #fff;
+}
+
+.right-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+	.navbar-brand{
+		width: 20%;
+	}	
+
+}
+
+@media only screen and (max-width: 800px){
+	.card .card-bottom-items{
+		flex-wrap: wrap;
+	}
+	.card-bottom-items .item{
+		display: flex;
+		border-right: 1px solid lightgrey;
+		width: 46%;
+		height: 50%;
+		padding: 4px 5px;
+	}
+	.card-bottom-items .item.last{
+		width: 46%;
+	}
+	.card-bottom-items .status{
+		height: 0;
+	}
+}
+@media only screen and (min-width: 890px) {
+	.input-group{
+		width: 550px;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.sidebar{
+		width: 30%;
+		z-index: 2222;
+	}
+	.body-content{
+		width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+@media only screen and (max-width: 700px){
+	.sidebar{
+		width: 50%;
+		z-index: 2222;
+	}
+	.input-group{
+		width: 150px;
+	}
+}
+@media only screen and (max-width: 400px){
+	.input-group{
+		width: 120px;
+	}
+	.sidebar{
+		width: 60%;
+	}
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ticket Dashboard</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+	  <div class="container-fluid">
+	  	<div class="toggler">
+	  		<i class="fas fa-stream"></i>
+	  	</div>
+	  	<a class="navbar-brand" href="#">Ticket</a>
+	  	<ul class="navbar-nav mr-auto">
+	  		<div class="input-group">
+	        <div class="input-group-prepend">
+	          <div class="input-group-text"><i class="fas fa-search"></i></div>
+	        </div>
+	        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search Tickets and Contacts">
+	    </div>
+	  	</ul>
+	  <ul class="navbar-nav ml-auto right-list">
+	  	<li class="nav-item nav-link-custom">
+	  		<div class="dropdown">
+		  	<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+		     <img src="images/avatar.png">
+		       <span class="caret"></span>
+		    </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		    <a class="dropdown-item" href="#">Action</a>
+		    <a class="dropdown-item" href="#">Another action</a>
+		    <a class="dropdown-item" href="#">Something else here</a>
+		  </div>
+		</div>
+	  	</li>
+	  	<li class="nav-item nav-link-custom"><a class="nav-link" data-toggle="modal" data-target="#loginModal" href="javascript:"><i class="far fa-file-alt"></i><span class="badge badge-danger">4</span></a></li>
+	  </ul>
+	  </div>
+	  	
+	</nav>
+	<div class="sidebar">
+		<div class="container">
+			<div class="list-title mt-4">
+			<h6>QUEUES</h6>
+		</div>
+		<ul>
+			<li class="active">
+				<a href="javascript:">
+					<div class="row mx-0">
+						<div class="col-10">All Tickets</div>
+						<div class="col-1">2K</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:">
+					<div class="row mx-0">
+						<div class="col-10">Priority</div>
+						<div class="col-1">3K</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:">
+					<div class="row mx-0">
+						<div class="col-10">Unresponsed</div>
+						<div class="col-1">2K</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:">
+					<div class="row mx-0">
+						<div class="col-10">Open Queue</div>
+						<div class="col-1">4K</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	<div class="body-content">
+		<div class="container-fluid">
+			<div class="row mb-3">
+				<div class="col-10">
+					<h1>All Tickets</h1>
+				</div>
+			</div>
+			<div class="card">
+				<div class="row">
+					<div class="col-4 col-lg-2 col-md-3">
+						<div class="center">
+							<p class="px-lg-3">#PD839299</p>
+							<button class="blue">OPEN</button>
+						</div>
+					</div>
+					<div class="col-8 col-lg-10 col-md-9 mt-2">
+						<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+						<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Error facere sequi reiciendis excepturi optio soluta.</p>
+					</div>
+				</div>
+				<hr />
+					<div class="row">
+						<div class="col-4 col-lg-2 col-md-3">
+							<div class="icons">
+								<div class="icon">
+									<i class="far fa-file-alt"></i>
+								</div>
+								<div class="icon">
+									<i class="far fa-file-alt"></i>
+								</div>
+								<div class="icon">
+									<i class="far fa-file-alt"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-8 col-lg-10 col-md-9 card-bottom-items">
+							<div class="item">
+								<img src="images/avatar.png" alt="">
+								<div class="text">
+									<p>Asignee</p>
+									<h6>John Doe</h6>
+								</div> 
+							</div>
+							<div class="item">
+								<img src="images/avatar.png" alt="">
+								<div class="text">
+									<p>Asignee</p>
+									<h6>John Doe</h6>
+								</div> 
+							</div>
+							<div class="item">
+								<img src="images/avatar.png" alt="">
+								<div class="text">
+									<p>Asignee</p>
+									<h6>John Doe</h6>
+								</div> 
+							</div>
+							<div class="item last">
+								<img src="images/avatar.png" alt="">
+								<div class="text">
+									<p>Asignee</p>
+									<h6>John Doe</h6>
+								</div> 
+							</div>
+							<div class="status">
+								<span class="ok"></span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	const toggler = document.querySelector('.toggler');
+    	const sidebar = document.querySelector('.sidebar');
+    	const bodycontent = document.querySelector('.body-content');
+    	toggler.addEventListener('click',function(e){
+    		sidebar.classList.toggle('hide')
+    		bodycontent.classList.toggle('full-width')
+    	})
+    </script>
+</body>
+</html>
